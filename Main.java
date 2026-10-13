@@ -13,6 +13,8 @@ public class Main {
     batman1.loseLife();
     System.out.println(batman1);
 
+    Superhero.superHeroFight(spiderman1,batman1);
+
   }
 
 }

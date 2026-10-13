@@ -21,7 +21,7 @@ public class Superhero {
     this.costume = costume;
     this.weapon = weapon;
     this.life = true;
-    this.weaponStrength = 0;
+    this.weaponStrength = (int) (Math.random() * 10) + 1;
 
   }
 
@@ -30,6 +30,41 @@ public class Superhero {
   public void loseLife() {
     this.life = false;
   }
+
+  public String getWeapon() {
+    return this.weapon;
+  }
+
+  public int getWeaponStrength() {
+    return this.weaponStrength;
+  }
+
+  public String getHeroName() {
+    return this.name;
+  }
+
+  public static void superHeroFight(Superhero superhero1, Superhero superhero2) {
+
+    String superHero1weapon = superhero1.getWeapon();
+    int superHero1weaponStrength = superhero1.getWeaponStrength();
+    String superHero1Name = superhero1.getHeroName();
+
+    String superHero2weapon = superhero2.getWeapon();
+    int superHero2weaponStrength = superhero2.getWeaponStrength();
+    String superHero2Name = superhero2.getHeroName();
+
+    if (superHero1weaponStrength > superHero2weaponStrength) {
+      System.out.print(superHero1Name);
+      System.out.print(" won using " + superHero1weapon + "\n");
+    } else if (superHero1weaponStrength < superHero2weaponStrength) {
+      System.out.print(superHero2Name);
+      System.out.print(" won using " + superHero2weapon + "\n");
+    } else {
+      System.out.println("The two heroes were equally matched!");
+    }
+
+  }
+
   
   // TODO #3: Including a toString() method (see 2.7) to help with printing out the Superhero details.
   public String toString(){
