@@ -26,12 +26,6 @@ public class Superhero {
   }
 
   // TODO #2: Add missing methods.
-  public void details() {
-
-    System.out.println("Superhero details: ");
-    System.out.println(toString());
-
-  }
 
   public void loseLife() {
     this.life = false;
@@ -40,7 +34,12 @@ public class Superhero {
   // TODO #3: Including a toString() method (see 2.7) to help with printing out the Superhero details.
   public String toString(){
   // all your code below to create a string with details
-    String superHeroDetails = "name: " + this.name + "\n" + "costume: " + this.costume + "\n" + "weapon: " + this.weapon + "\n" + "life: " + this.life + "\n" + "weapon strength: " + this.weaponStrength + "\n";
+    String superHeroDetails = "Superhero details\n" 
+    + "    name: " + this.name + "\n" 
+    + "    costume: " + this.costume + "\n" 
+    + "    weapon: " + this.weapon + "\n" 
+    + "    life: " + this.life + "\n"
+    + "    weapon strength: " + this.weaponStrength + "\n";
     return superHeroDetails;
   }
 }

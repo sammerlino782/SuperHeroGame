@@ -10,6 +10,7 @@ public class Main {
     System.out.println(spiderman1);
     Superhero batman1 = new Superhero("Batman", "Batsuit", "Super Strength");
     spiderman1.loseLife();
+    batman1.loseLife();
     System.out.println(batman1);
 
   }
