@@ -16,6 +16,14 @@ public class Superhero {
 
   }
 
+  public Superhero() {
+    this.name = "no name";
+    this.costume = "a t-shirt";
+    this.weapon = "fist";
+    this.life = true;
+    this.weaponStrength = 0;
+  }
+
   public Superhero(String name, String costume, String weapon) {
     this.name = name;
     this.costume = costume;
@@ -43,6 +51,19 @@ public class Superhero {
     return this.name;
   }
 
+  public int specialAttack(int powerLevel) {
+    return this.getWeaponStrength() + (int) Math.random() * powerLevel + 1;
+  }
+
+  public void setWeaponStrength() {
+    this.weaponStrength = (int) Math.random() * 10 + 1;
+  }
+
+  public void setWeaponStrength(int weaponStrength) {
+    this.weaponStrength = weaponStrength;
+  }
+
+  public static void placeHolderFight(Superhero superhero1)
   public static void superHeroFight(Superhero superhero1, Superhero superhero2) {
 
     String superHero1weapon = superhero1.getWeapon();

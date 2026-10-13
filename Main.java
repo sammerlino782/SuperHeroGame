@@ -15,6 +15,17 @@ public class Main {
 
     Superhero.superHeroFight(spiderman1,batman1);
 
+    Superhero batman = new Superhero("Batman", "Batsuit", "Batarang");
+    Superhero spiderman = new Superhero("Spiderman", "Redsuit", "Superweb");
+
+    System.out.println(batman);
+    System.out.println(spiderman);
+
+    System.out.println("The Green Goblin shows up");
+    spiderman.loseLife();
+    System.out.println(spiderman);
+
+    
   }
 
 }
